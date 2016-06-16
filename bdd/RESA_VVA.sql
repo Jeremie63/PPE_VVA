@@ -19,7 +19,10 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `resa_vva`
 --
+DROP DATABASE IF EXISTS RESA_VVA;
 
+CREATE DATABASE IF NOT EXISTS RESA_VVA;
+USE RESA_VVA;
 -- --------------------------------------------------------
 
 --
