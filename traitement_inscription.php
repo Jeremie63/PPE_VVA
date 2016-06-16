@@ -7,7 +7,7 @@ puis on redirige vers la page admin.
 	if(isset($_SESSION['uti']) && $_SESSION['uti']==1 && isset($_POST['mdp']))
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=resa_vva;charset=utf8', 'root', '');
-		$req = $bdd->prepare('INSERT INTO compte VALUES (:user,:mdp,:nomcompte,:prenomcompte,:dateinscrip,:dateSupprAnnee"-":dateSupprMois"-":dateSupprJour,:typecompte)');
+		$req = $bdd->prepare('INSERT INTO compte VALUES (:user,:mdp,:nomcompte,:prenomcompte,:dateinscrip,NULL,:typecompte)');
 
 		$req->bindParam(":user",$_POST['user']);
 		$req->bindParam(":mdp",$_POST['mdp']);
@@ -15,10 +15,6 @@ puis on redirige vers la page admin.
 		$req->bindParam(":prenomcompte",$_POST['preCompte']);
 		$req->bindParam(":dateinscrip",date("Y-m-d"));
 		$req->bindParam(":typecompte",$_POST['typeCompte']);
-		$req->bindParam(":dateSupprJour",$_POST['dateSupprJour']);
-		$req->bindParam(":dateSupprMois",$_POST['dateSupprMois']);
-		$req->bindParam(":dateSupprAnnee",$_POST['dateSupprAnnee']);
-
 
 		$req->execute();
 
