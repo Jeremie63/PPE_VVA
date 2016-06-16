@@ -72,26 +72,6 @@
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label class="control-label col-sm-3" for="dateSupprJour" id="lbPreCompte">*Date de suppression : </label>
-								<div class="col-sm-2">
-									<select class="form-control" name="dateSupprJour" required>
-										<?php
-											for($i=1;$i<=31;$i++){echo "<option value='";if($i<=9){echo"0";}echo $i."'>";if($i<=9){echo"0";}echo $i."</option>";} ?>
-									</select>
-								</div>
-								<div class="col-sm-2">
-									<select class="form-control" name="dateSupprMois" required>
-										<?php for($j=1;$j<=12;$j++){echo"<option value='";if($j<=9){echo"0";}echo $j."'>";if($j<=9){echo"0";}echo $j."</option>";} ?>
-									</select>
-								</div>
-								<div class="col-sm-2">
-									<select class="form-control" name="dateSupprAnnee" required>
-										<?php for($k=date("Y");$k<=2050;$k++){echo"<option value='".$k."'/>".$k."</option>";} ?>
-									</select>
-								</div>
-							</div>
-
 							<div id="compteVil"></div>
 
 							<div class="form-group">
