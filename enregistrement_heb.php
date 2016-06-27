@@ -53,16 +53,6 @@
 									<input class="form-control" type="text" name="nomHeb" required></br>
 								</div>
 							</div>
-							
-							<div class="form-group">
-								<label class="control-label col-sm-3" for="type" id="lbSite">Veuillez choisir un site :</label>
-								<div class="col-sm-5">
-									<select class="form-control" name="selectSite">
-										<option selected value='TOUT'>Tout site</option>
-										<?php include("traitement_affichageSite.php"); ?>
-									</select>
-								</div>
-							</div>
 
 							<div class="form-group">
 								<label class="control-label col-sm-3" for="places">Nombre de places :</label>
